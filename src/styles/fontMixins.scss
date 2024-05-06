@@ -1,0 +1,116 @@
+@import "./media.scss";
+@import "./common.scss";
+
+@mixin H1 {
+  font-family: var(--font-family-first);
+  font-weight: 300;
+  font-size: 53px;
+
+  @include media(md) {
+    font-size: 34px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+@mixin H2 {
+  font-family: var(--font-family-first);
+  font-weight: 300;
+  font-size: 38px;
+
+  @include media(md) {
+    font-size: 34px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+@mixin H3 {
+  font-family: var(--font-family-first);
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 133%;
+
+  @include media(md) {
+    font-size: 34px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+@mixin H4 {
+  font-family: var(--font-family-first);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 146%;
+
+  @include media(md) {
+    font-size: 34px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+@mixin H5 {
+  font-family: var(--font-family-first);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+
+  @include media(md) {
+    font-size: 34px;
+    line-height: 112%;
+    letter-spacing: 0.02em;
+  }
+}
+
+@mixin Large {
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+
+  @include media(md) {
+    font-size: 16px;
+    line-height: 142%;
+  }
+}
+@mixin Medium {
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 157%;
+
+  @include media(md) {
+    font-size: 16px;
+    line-height: 142%;
+  }
+}
+@mixin Normal {
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 159%;
+
+  @include media(md) {
+    font-size: 16px;
+    line-height: 142%;
+  }
+}
+@mixin Small1 {
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 167%;
+
+  @include media(md) {
+    font-size: 16px;
+    line-height: 142%;
+  }
+}
+@mixin Small2 {
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 12px;
+
+  @include media(md) {
+    font-size: 16px;
+    line-height: 142%;
+  }
+}

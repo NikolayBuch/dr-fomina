@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.wrapper {
+  width: 793px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  transition: transform 600ms ease-in-out;
+}
+
+.button {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+
+  border-radius: 50px;
+  background: var(--gray-color);
+  transition: background 300ms ease;
+  cursor: pointer;
+}
+
+.active {
+  background: var(--pink-color);
+}

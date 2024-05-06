@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 0 14px 0;
+
+  border-bottom: 1px solid;
+  border-color: #e5e8ea;
+}
+
+.sing {
+  margin-left: 35px;
+  margin-right: 40px;
+}
+
+.user {
+  &:hover .line::after {
+    width: 0;
+  }
+}
+
+.line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--pink-color);
+    transition: width 300ms ease;
+  }
+}

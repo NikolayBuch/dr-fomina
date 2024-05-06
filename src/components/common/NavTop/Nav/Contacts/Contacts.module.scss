@@ -1,0 +1,32 @@
+@use "styles/common";
+
+.root {
+  position: relative;
+  margin-left: 25px;
+  padding-right: 25px;
+
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--gray-color);
+  }
+
+}
+
+.link {
+
+  transition: color 300ms ease;
+  &:hover {
+    color: var(--blue-color);
+  }
+}
+

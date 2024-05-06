@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  padding: 13px 0 14px 0;
+
+  border-bottom: 1px solid;
+  border-color: #e5e8ea;
+}
+
+.contacts {
+  display: flex;
+
+  & li {
+    margin-right: 60px;
+    margin: 0 25px 0 25px;
+  }
+}

@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.root2 {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}

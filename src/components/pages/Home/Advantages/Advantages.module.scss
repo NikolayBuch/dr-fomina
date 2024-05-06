@@ -1,0 +1,20 @@
+.root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 638px;
+}
+
+.title{
+  margin-bottom: 68px;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  height: auto;
+  margin: -50px -30px;
+}

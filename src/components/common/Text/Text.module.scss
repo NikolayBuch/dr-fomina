@@ -1,0 +1,47 @@
+@import "styles/fontMixins.scss";
+
+.root {
+ 
+}
+
+.size {
+  &-h1 {
+    @include H1;
+  }
+
+  &-h2 {
+    @include H2;
+  }
+
+  &-h3 {
+    @include H3;
+  }
+
+  &-h4 {
+    @include H4;
+  }
+
+  &-h5 {
+    @include H5;
+  }
+
+  &-large {
+    @include Large;
+  }
+
+  &-medium {
+    @include Medium;
+  }
+
+  &-normal {
+    @include Normal;
+  }
+
+  &-small1 {
+    @include Small1;
+  }
+
+  &-small2 {
+    @include Small2;
+  }
+}

@@ -1,0 +1,20 @@
+@import "./fonts.scss";
+
+.root {
+  --pink-color: #c6007f;
+  --pink-hover-color: #de008e;
+  --pink-light-color: #fdf3f9;
+  --blue-color: #2396d4;
+  --blue-light-color: #f4fcff;
+  --coral-color: #fa7576;
+  --black-color: #333333;
+  --black-light-color: #4a4a4a;
+  --beige-color: #f8e1d1;
+  --beige-light-color: #fdf8f3;
+  --gray-color: #e5e8ea;
+  --gray-light-color: #d8d8d8;
+  --white-color: #ffffff;
+
+  --font-family-first: "Roboto Slab", sans-serif;
+  --font-family-second: "Proxima Nova", sans-serif;
+}
