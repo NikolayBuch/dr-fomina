@@ -11,7 +11,7 @@ const Nav = () => {
       {menu.map((item) => (
         <li className={s.nav}>
           <div className={s.icon}>
-            <img src={`images/${item.icon}`} alt='story ' />
+            <img src={`images/svg/${item.icon}`} alt='story ' />
           </div>
           <Text as='a' size='' className={s.link} href={item.link}>{item.title}</Text>
         </li>

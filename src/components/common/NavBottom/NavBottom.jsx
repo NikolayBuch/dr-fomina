@@ -12,7 +12,7 @@ const NavBottom = () => {
       <Logo />
       <Nav />
       <Button className={s.sing} option='main'>ЗАПИСАТЬСЯ НА ПРИЕМ</Button>
-      <Button option='user' className={s.user}><img src='/images/user.svg'></img><p className={s.line}>ЛИЧНЫЙ КАБИНЕТ</p> </Button>
+      <Button option='user' className={s.user}><img src='/images/svg/user.svg'></img><p className={s.line}>ЛИЧНЫЙ КАБИНЕТ</p> </Button>
     </div>
   );
 };

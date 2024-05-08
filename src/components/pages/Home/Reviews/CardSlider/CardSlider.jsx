@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import Text from 'components/Text';
 
-import s from './Card.module.scss';
+import s from './CardSlider.module.scss';
 
-const Card = ({ item }) => {
+const CardSlider = ({ item, onFindReview }) => {
   return (
     <div className={s.root}>
       {item.userpic ? (
@@ -24,13 +24,26 @@ const Card = ({ item }) => {
       <Text as='p' size='normal' className={s.text}>
         {item.excerpt}
       </Text>
-      <button className={s.button}>Читать отзыв</button>
+      <button className={s.button} onClick={() => onFindReview(item)}>
+        Читать отзыв{' '}
+        <svg
+          width='25'
+          height='12'
+          viewBox='0 0 25 12'
+          fill='none'>
+          <path
+            d='M24.168 5.969H1M19.166 1L24.21 5.97L19.166 10.94'
+            stroke='currentColor'
+          />
+        </svg>
+      </button>
     </div>
   );
 };
 
-export default Card;
+export default CardSlider;
 
-Card.propTypes = {
-  item: PropTypes.any
-}
+CardSlider.propTypes = {
+  item: PropTypes.any,
+  onFindReview: PropTypes.func,
+};

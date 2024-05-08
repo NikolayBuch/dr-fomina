@@ -50,6 +50,10 @@
 }
 
 .button {
+display: flex;
+align-items: center;
+gap: 10px;
+
   color: var(--black-light-color);
 
   font-family: var(--font-family-second);

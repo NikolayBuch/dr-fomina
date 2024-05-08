@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 
 import ButtonSlider from './ButtonSlider';
-import Card from '../Card';
-import { list } from 'stubs/reviews';
 
 import s from './Slider.module.scss';
 
-const Slider = () => {
+const Slider = ({ children, list }) => {
   const [slideIndex, setSliderIndex] = useState(0);
 
   const length = list.length;
@@ -38,9 +36,7 @@ const Slider = () => {
           <div
             className={s.inner}
             style={{ transform: `translateX(${-793 * slideIndex}px)` }}>
-            {list.map((item) => (
-              <Card item={item} key={item.id} />
-            ))}
+            {children}
           </div>
         </div>
         <ButtonSlider side='right' onClick={handleMoveRight} />

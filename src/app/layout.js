@@ -1,3 +1,4 @@
+import { Providers } from "./providers";
 
 export const metadata = {
   title: "Клиника Докторо Фомина",
@@ -7,7 +8,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          {children}
+        </Providers>
+        </body>
     </html>
   );
 }

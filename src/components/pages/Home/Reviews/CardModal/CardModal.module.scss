@@ -1,0 +1,51 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  margin: 61px 45px;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 28px;
+  border-bottom: var(--gray-color) 1px solid;
+
+}
+
+.userpic {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+  margin-right: 31px;
+  margin-bottom: 24px ;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.date {
+  color: var(--black-light-color)
+}
+
+.name {
+  margin-bottom: 11px;
+  color: var(--black-color);
+}
+
+.city {
+  color: var(--black-light-color);
+}
+
+.text {
+  color: #6f6f6f;;
+}
