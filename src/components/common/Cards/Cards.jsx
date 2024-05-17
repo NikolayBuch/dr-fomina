@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 import Text from 'components/Text';
 
@@ -24,3 +25,7 @@ const Cards = ({ item }) => {
 };
 
 export default Cards;
+
+Cards.propTypes = {
+  item: PropTypes.object
+}

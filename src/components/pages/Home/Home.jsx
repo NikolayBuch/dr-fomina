@@ -6,6 +6,7 @@ import Directions from './Directions';
 import Advantages from './Advantages';
 import Reviews from './Reviews';
 import Modal from 'components/Modal';
+import Info from './Info';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Advantages/>
       <Reviews/>
       <Modal/>
+      <Info/>
     </div>
   );
 };

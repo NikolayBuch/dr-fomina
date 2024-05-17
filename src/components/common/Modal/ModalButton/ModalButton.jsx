@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import s from './ModalButton.module.scss';
@@ -17,3 +18,8 @@ const ModalButton = ({ className, onClick }) => {
 };
 
 export default ModalButton;
+
+ModalButton.propTypes = {
+  className: PropTypes.string,
+  onClick: PropTypes.func
+}

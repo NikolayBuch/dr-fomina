@@ -1,18 +1,20 @@
 'use client';
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { ModalContext } from 'context/modalContext';
+import useModal from 'hooks/useModal';
 
 import s from './Modal.module.scss';
 import ModalButton from 'components/Modal/ModalButton';
 import CardModal from 'pages/Home/Reviews/CardModal';
 
-const Modal = ({ isOpen }) => {
-  const { toggleModal, modalData } = useContext(ModalContext);
+const Modal = ({ isOpen, modalData}) => {
+  const { toggleModal } = useModal();
   const [showModal, setShowModal] = useState(false);
-  const ModalComponent = getModalContent(modalData.type);
+  // const ModalComponent = getModalContent(modalData.type);
+  console.log(modalData);
 
   useEffect(() => {
     isOpen ? setShowModal(true) : setShowModal(false);
@@ -47,4 +49,8 @@ export const getModalContent = (type) => {
     default:
       return null;
   }
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
 };

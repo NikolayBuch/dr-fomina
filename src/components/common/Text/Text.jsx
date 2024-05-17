@@ -45,9 +45,5 @@ Text.propTypes = {
   as: PropTypes.any,
 };
 
-// Text.defaultProps = {
-//   size: 'medium',
-//   as: 'div',
-// };
 
 export default Text;

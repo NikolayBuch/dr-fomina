@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Text from 'components/Text';
 
@@ -18,3 +19,7 @@ const List = ({ item }) => {
 };
 
 export default List;
+
+List.propTypes = {
+  item: PropTypes.object
+}

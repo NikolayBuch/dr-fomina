@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Text from 'components/Text';
 
@@ -35,3 +36,7 @@ const CardModal = ({item}) => {
 };
 
 export default CardModal;
+
+CardModal.propTypes = {
+  item: PropTypes.object
+}

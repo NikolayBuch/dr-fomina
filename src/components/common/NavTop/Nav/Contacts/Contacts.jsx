@@ -19,5 +19,5 @@ const Contacts = ({ item,  }) => {
 export default Contacts;
 
 Contacts.propTypes = {
-  item: PropTypes.any
+  item: PropTypes.object
 }

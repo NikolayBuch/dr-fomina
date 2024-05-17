@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const ArrowIcon = ({ side }) => {
-  
+
   const getIcon = (name) => {
     switch (name) {
       case 'right':
@@ -32,3 +34,7 @@ const ArrowIcon = ({ side }) => {
 };
 
 export default ArrowIcon;
+
+ArrowIcon.propTypes = {
+  side: PropTypes.string
+}

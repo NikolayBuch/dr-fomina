@@ -5,12 +5,12 @@ import Text from 'components/Text';
 import Slider from './Slider';
 import CardSlider from './CardSlider';
 import { list } from 'stubs/reviews';
-import { ModalContext } from 'context/modalContext';
+import useModal from 'hooks/useModal';
 
 import s from './Reviews.module.scss';
 
 const Reviews = () => {
-  const { toggleModal } = useContext(ModalContext);
+  const { toggleModal } = useModal();
 
   const findReview = useCallback(
     (item) => {

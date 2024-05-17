@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import ButtonSlider from './ButtonSlider';
@@ -55,3 +56,8 @@ const Slider = ({ children, list }) => {
 };
 
 export default Slider;
+
+Slider.propTypes = {
+  children: PropTypes.any,
+  list: PropTypes.array
+}
