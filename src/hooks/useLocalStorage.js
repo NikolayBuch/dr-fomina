@@ -12,7 +12,10 @@ const encode = (value) => {
 const useLocalStorage = (key, defaultState) => {
 
     const [value, setValue] = useState(
-      encode(localStorage.getItem(key)||null) || defaultState
+      useEffect(() => {
+        encode(localStorage.getItem(key)||null) || defaultState
+
+      }, [])
     )
   
     useEffect(() => {
