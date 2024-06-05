@@ -11,16 +11,22 @@ const encode = (value) => {
 
 const useLocalStorage = (key, defaultState) => {
 
-    const [value, setValue] = useState(
-      useEffect(() => {
-        encode(localStorage.getItem(key)||null) || defaultState
+  const data = () => {
+    if (typeof window !== 'undefined') {
+    
+      return  encode(localStorage.getItem(key) || null) || defaultState
+     }
+  }
 
-      }, [])
-    )
-  
-    useEffect(() => {
-      localStorage.setItem(key, decode(value))
-    },  [key, value])
+ 
+  const [value, setValue] = useState(
+   
+    data
+  )
+
+  useEffect(() => {
+    localStorage.setItem(key, decode(value))
+  }, [key, value])
 
   return [value, setValue]
 
