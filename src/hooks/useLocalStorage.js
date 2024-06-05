@@ -11,7 +11,6 @@ const encode = (value) => {
 
 const useLocalStorage = (key, defaultState) => {
 
-  if ( typeof window !== 'undefined') {
     const [value, setValue] = useState(
       encode(localStorage.getItem(key)||null) || defaultState
     )
@@ -22,7 +21,6 @@ const useLocalStorage = (key, defaultState) => {
 
   return [value, setValue]
 
-  }
 
   // const [value, setValue] = useState(
   //   encode(localStorage.getItem(key)||null) || defaultState
