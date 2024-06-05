@@ -6,7 +6,7 @@
   width: 20px;
   height: 19px;
   color: var(--black-light-color);
-  transition: color 300ms ease;
+  transition: color 300ms linear;
   &:hover {
     color: var(--blue-color);
   }

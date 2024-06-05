@@ -1,0 +1,22 @@
+@import "styles/mixins";
+
+.agreement {
+  padding: 40px;
+  .no {
+    color: #828282;
+    @include hoverButton;
+    font-family: var(--font-family-second);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 167%;
+  }
+}
+
+.yes {
+  padding: 14px 100px;
+  margin-right: 71px;
+
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 12px;
+}

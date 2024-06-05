@@ -5,6 +5,7 @@
 .description {
   display: flex;
   flex-direction: column;
+  align-items: start;
 
   width: 557px;
   height: 296px;
@@ -16,5 +17,24 @@
 }
 .text {
   margin-bottom: 31px;
+}
+
+.link{
+  position: relative;
+  color: var(--blue-color);
   
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    margin-top: 1px;
+    background-color: var(--blue-color);
+  }
+}
+
+.button {
+  padding: 14px 40px;
 }

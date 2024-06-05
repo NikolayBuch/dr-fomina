@@ -5,7 +5,7 @@
 
   font-size: 14px;
   color: var(--black-light-color);
-  transition: color 300ms ease;
+  transition: color 300ms linear;
   &:hover {
     color: var(--blue-color);
   }
@@ -45,7 +45,7 @@
       width: 100%;
       height: 1px;
       background: #a8a2a5;
-      transition: width 300ms ease;
+      transition: width 300ms linear;
     }
 
     &:hover::after {
@@ -56,8 +56,8 @@
   &-drop {
     padding: 15px 15px 0 15px;
     transition:
-      background 300ms ease,
-      color 300ms ease;
+      background 300ms linear,
+      color 300ms linear;
 
     & a {
       position: relative;
@@ -73,8 +73,8 @@
         height: 1px;
         background: var(--gray-light-color);
         transition:
-          background 300ms ease,
-          color 300ms ease;
+          background 300ms linear,
+          color 300ms linear;
       }
     }
 
@@ -99,13 +99,13 @@
 
 .static {
   transform: rotate(0);
-  transition: transform 300ms ease;
+  transition: transform 300ms linear;
 }
 
 .active {
   color: var(--blue-color);
   .dropdown {
     transform: rotate(180deg);
-    transition: transform 300ms ease;
+    transition: transform 300ms linear;
   }
 }

@@ -12,6 +12,7 @@ import Arrow from './Arrow';
 import s from './NavElem.module.scss';
 
 const NavElem = ({ item, option }) => {
+  
   const [isOpen, setOpen] = useState(false);
 
   const changeOpen = () => {
@@ -24,7 +25,7 @@ const NavElem = ({ item, option }) => {
 
   if (item.icon) {
     return (
-      <Text as='li' size='large' key={item.id} className={cx(s.root, mods)}>
+      <Text as='li' size='large' className={cx(s.root, mods)}>
         <button
           onClick={changeOpen}
           onBlur={changeOpen}

@@ -1,0 +1,11 @@
+@import "styles/mixins";
+.root {
+  padding-bottom: 30px;
+
+  li {
+    margin: 40px;
+    a {
+      @include hoverButton;
+    }
+  }
+}

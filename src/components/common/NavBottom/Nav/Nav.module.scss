@@ -1,4 +1,4 @@
-@import "styles/common";
+// @import "styles/common";
 .root {
   display: flex;
 }
@@ -11,7 +11,7 @@
 }
 
 .link {
-  transition: color 300ms ease;
+  transition: color 300ms linear;
   &:hover {
     color: var(--pink-hover-color);
   }

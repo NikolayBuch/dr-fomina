@@ -1,3 +1,5 @@
+@import 'styles/mixins';
+@import 'styles/media';
 .root {
   display: flex;
   flex-direction: column;
@@ -54,7 +56,6 @@ display: flex;
 align-items: center;
 gap: 10px;
 
-  color: var(--black-light-color);
 
   font-family: var(--font-family-second);
   font-weight: 300;
@@ -62,9 +63,15 @@ gap: 10px;
   line-height: 167%;
   cursor: pointer;
 
-  transition: color 300ms ease;
+  transition: color 300ms linear;
 
-  &:hover {
-    color: var(--blue-color);
+  p{
+    @include hoverButton;
   }
+
+  @include hover {
+    color:var(--blue-color);
+  }
+
+  
 }

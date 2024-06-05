@@ -1,0 +1,25 @@
+@import "styles/media";
+.root {
+  position: fixed;
+  right: 30px;
+  bottom: 123px;
+  display: none;
+}
+
+.button {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+  color: var(--pink-color);
+  transition: transform 300ms linear;
+
+  @include hover {
+    transform: translateY(-4px);
+  }
+}
+
+.active {
+  display: block;
+}

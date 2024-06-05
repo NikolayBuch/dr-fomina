@@ -1,0 +1,33 @@
+@import "./media.scss";
+
+@mixin after {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--blue-color);
+    transition: width 300ms linear;
+  }
+
+  @include hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+@mixin hoverButton {
+  position: relative;
+  transition: color 300ms linear;
+
+  @include after;
+
+  @include hover {
+    color: var(--blue-color);
+  }
+}

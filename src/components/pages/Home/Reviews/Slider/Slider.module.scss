@@ -26,7 +26,7 @@
 
   border-radius: 50px;
   background: var(--gray-color);
-  transition: background 300ms ease;
+  transition: background 300ms linear;
   cursor: pointer;
 }
 

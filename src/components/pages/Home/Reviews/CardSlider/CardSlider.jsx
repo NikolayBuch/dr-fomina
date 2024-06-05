@@ -24,13 +24,11 @@ const CardSlider = ({ item, onFindReview }) => {
       <Text as='p' size='normal' className={s.text}>
         {item.excerpt}
       </Text>
+
       <button className={s.button} onClick={() => onFindReview(item)}>
-        Читать отзыв{' '}
-        <svg
-          width='25'
-          height='12'
-          viewBox='0 0 25 12'
-          fill='none'>
+        <p>Читать отзыв</p>
+
+        <svg width='25' height='12' viewBox='0 0 25 12' fill='none'>
           <path
             d='M24.168 5.969H1M19.166 1L24.21 5.97L19.166 10.94'
             stroke='currentColor'

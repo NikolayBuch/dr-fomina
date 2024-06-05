@@ -20,8 +20,8 @@ Container.propTypes = {
   size: PropTypes.oneOf(['normal', 'big']),
 };
 
-Container.defaultProps = {
-  size: 'normal',
-};
+// Container.defaultProps = {
+//   size: 'normal',
+// };
 
 export default Container;

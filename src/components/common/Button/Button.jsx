@@ -6,11 +6,11 @@ import modsClasses from 'utils/modsClasses';
 
 import s from './Button.module.scss';
 
-const Button = ({ option, children, className }) => {
+const Button = ({ option, children, className, onClick }) => {
   const mods = modsClasses(s, {
     option,
   });
-  return <button className={cx(s.root, mods, className)}>{children}</button>;
+  return <button onClick={onClick} className={cx(s.root, mods, className)}>{children}</button>;
 };
 
 export default Button;
@@ -21,6 +21,6 @@ Button.propTypes = {
   option: PropTypes.oneOf(['main', 'user']),
 };
 
-Button.defaultProps = {
-  option: 'main',}
+// Button.defaultProps = {
+//   option: 'main',}
 

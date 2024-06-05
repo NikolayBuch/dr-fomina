@@ -1,4 +1,3 @@
-@import "styles/common.scss";
 .root {
   position: absolute;
   top: 25px;
@@ -7,9 +6,9 @@
   display: none;
   width: 242px;
   height: 309px;
- 
+
   background: var(--white-color);
-  transition: all 300ms ease;
+  transition: all 300ms linear;
 
   &:after {
     content: "";

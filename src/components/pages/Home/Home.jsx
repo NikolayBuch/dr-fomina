@@ -1,23 +1,33 @@
-import React from 'react';
+'use client';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
-import Header from 'components/Header';
 import Main from './Main';
 import Directions from './Directions';
 import Advantages from './Advantages';
 import Reviews from './Reviews';
-import Modal from 'components/Modal';
 import Info from './Info';
+import AboutPeople from './AboutPeople';
+import useModal from 'hooks/useModal';
+import { Context } from 'context/Context';
 
 const Home = () => {
+  const {city} = useContext(Context)
+  const { toggleModal } = useModal();
+
+  useEffect(() => {
+    if (city.answer === false) {
+      toggleModal({content: city, type:'city'})
+    }
+  },[city]);
+
   return (
     <div>
-      <Header />
       <Main />
-      <Directions/>
-      <Advantages/>
-      <Reviews/>
-      <Modal/>
-      <Info/>
+      <Directions />
+      <Advantages />
+      <Reviews />
+      <Info />
+      <AboutPeople />
     </div>
   );
 };

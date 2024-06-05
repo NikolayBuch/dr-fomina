@@ -10,7 +10,7 @@ const Directions = () => {
   return (
     <Container size='big' className={s.cards}>
        {card.map((item) => (
-          <Cards item={item} />
+          <Cards key={item.id} item={item} />
         ))}
     </Container>
   );

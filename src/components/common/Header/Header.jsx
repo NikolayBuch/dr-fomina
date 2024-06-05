@@ -1,21 +1,20 @@
 import React from 'react';
 
-import s from './Header.module.scss'
-
-import Container from 'components/Container';
 import NavTop from 'components/NavTop';
 import NavBottom from 'components/NavBottom';
 
+import s from './Header.module.scss';
+
+
 const Header = () => {
   return (
-    <header >
+    <header>
       <nav className={s.root}>
-      <Container size='normal' className={s.root2}>
-        <NavTop />
-        <NavBottom/>
-      </Container>
+        <div className={s.root2}>
+          <NavTop />
+          <NavBottom />
+        </div>
       </nav>
-      
     </header>
   );
 };

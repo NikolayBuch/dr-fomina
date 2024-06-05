@@ -1,3 +1,4 @@
+
 .root {
   display: flex;
   justify-content: center;
@@ -7,7 +8,7 @@
   padding: 13px 0 14px 0;
 
   border-bottom: 1px solid;
-  border-color: #e5e8ea;
+  border-color: var(--gray-color);
 }
 
 .contacts {

@@ -1,0 +1,69 @@
+@import "styles/mixins";
+@import "styles/media.scss";
+
+.root {
+  padding-top: 107px;
+  color: var(--black-color);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.left {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 38px;
+  grid-row-gap: 15px;
+  li {
+    height: 33px;
+    a {
+      padding-bottom: 2px;
+      height: 100%;
+      @include hoverButton;
+    }
+    &:last-child {
+      grid-column: 2;
+    }
+  }
+}
+
+.contactsWrapper {
+  margin-bottom: 23px;
+}
+.contactsItem {
+  margin-bottom: 27px;
+}
+.contactsLink {
+  color: var(--black-light-color);
+  transition: color 300ms linear;
+  &:hover {
+    color: var(--blue-color);
+  }
+}
+
+.socialWrapper {
+  margin: -5px;
+}
+.socialItem {
+  opacity: 0.13;
+  padding: 5px;
+  transition: color 300ms linear, opacity 300ms linear,;
+
+  @include hover {
+    color: var(--blue-color);
+    opacity: 1;
+  }
+}
+.licenseWrapper {
+  height: 70px;
+  margin-top: 58px;
+  padding-top: 19px;
+  border-top: 1px solid #8e8e8e;
+}
+.license {
+  width: 370px;
+  font-family: var(--font-family-second);
+  font-weight: 400;
+  font-size: 14px;
+  color: #8e8e8e;
+}

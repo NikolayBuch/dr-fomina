@@ -6,13 +6,13 @@ export const menu = [
     link: '/services',
   },
   {
-    id: 1,
+    id: 2,
     icon: 'doctors.svg',
     title: "Врачи",
     link: '/doctors',
   },
   {
-    id: 1,
+    id: 3,
     icon: 'treatment.svg',
     title: "Что мы лечим",
     link: '/treatment',

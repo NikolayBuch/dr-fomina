@@ -15,19 +15,19 @@ const Nav = () => {
       <div>
         <ul className={s.root}>
           {left.map((item) => (
-            <NavElem option='left' item={item} />
+            <NavElem key={item.id} option='left' item={item} />
           ))}
         </ul>
       </div>
       <div>
         <ul className={s.root}>
           {center.map((item) => (
-            <NavElem option='center' item={item} />
+            <NavElem key={item.id} option='center' item={item} />
           ))}
         </ul>
       </div>
       {right.map((item) => (
-        <Contacts item={item} />
+        <Contacts key={item.id} item={item} />
       ))}
     </div>
   );
