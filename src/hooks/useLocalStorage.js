@@ -6,24 +6,33 @@ const decode = (value) => {
 }
 
 const encode = (value) => {
-  useEffect(() => {
-     JSON.parse(value)
-  }, [])
-  
+  return JSON.parse(value)
 }
 
 const useLocalStorage = (key, defaultState) => {
 
-  const [value, setValue] = useState(
-    
-    encode(localStorage.getItem(key)||null) || defaultState
-  )
-
-  useEffect(() => {
-    localStorage.setItem(key, decode(value))
-  },  [key, value])
+  if ( typeof window !== 'undefined') {
+    const [value, setValue] = useState(
+      encode(localStorage.getItem(key)||null) || defaultState
+    )
+  
+    useEffect(() => {
+      localStorage.setItem(key, decode(value))
+    },  [key, value])
 
   return [value, setValue]
+
+  }
+
+  // const [value, setValue] = useState(
+  //   encode(localStorage.getItem(key)||null) || defaultState
+  // )
+
+  // useEffect(() => {
+  //   localStorage.setItem(key, decode(value))
+  // },  [key, value])
+
+  // return [value, setValue]
 }
 
 export {
