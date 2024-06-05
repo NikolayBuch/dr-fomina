@@ -6,11 +6,16 @@ const decode = (value) => {
 }
 
 const encode = (value) => {
-  return JSON.parse(value)
+  useEffect(() => {
+     JSON.parse(value)
+  }, [])
+  
 }
 
 const useLocalStorage = (key, defaultState) => {
+
   const [value, setValue] = useState(
+    
     encode(localStorage.getItem(key)||null) || defaultState
   )
 
