@@ -1,3 +1,4 @@
+@import 'styles/media';
 .root {
   font-family: var(--font-family-second);
   font-weight: 400;
@@ -18,12 +19,12 @@
       color 300ms linear,
       transform 300ms linear;
 
-    &:hover {
-      background: var(--pink-color);
-      color: aliceblue;
-      box-shadow: 0 5px 9px 0 #ebb2d6;
-      transform: translateY(-4px);
-    }
+      @include hover {
+          background: var(--pink-color);
+          color: var(--white-color);
+          box-shadow: 0 5px 9px 0 var(--pink-alt-color);
+          transform: translateY(-4px);
+      }
   }
   &-user {
     display: flex;

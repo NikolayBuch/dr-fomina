@@ -1,4 +1,6 @@
 @import "styles/mixins";
+@import "styles/media";
+
 
 .root {
   position: relative;
@@ -11,7 +13,7 @@
   height: 375px;
   padding: 40px 0 70px 75px;
 
-  &:hover {
+  @include hover {
     .button::after {
       width: 100%;
     }

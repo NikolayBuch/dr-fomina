@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .root {
   position: relative;
 
@@ -28,7 +30,7 @@
     opacity: 0.6;
   }
 
-  &:hover {
+  @include hover {
     .button{
       width: 79px;
       height: 79px;

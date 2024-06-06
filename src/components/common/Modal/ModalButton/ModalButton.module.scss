@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .root {
   position: absolute;
   top: 35px;
@@ -7,7 +9,8 @@
   height: 19px;
   color: var(--black-light-color);
   transition: color 300ms linear;
-  &:hover {
+
+  @include hover {
     color: var(--blue-color);
   }
 }

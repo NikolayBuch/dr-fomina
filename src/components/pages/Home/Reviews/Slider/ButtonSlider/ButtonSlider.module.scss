@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .button {
   margin: 0 42px;
   color: var(--black-light-color);
@@ -7,7 +9,7 @@
     opacity 400ms linear;
   cursor: pointer;
 
-  &:hover {
+  @include hover {
     opacity: 1;
     color: var(--blue-color);
   }

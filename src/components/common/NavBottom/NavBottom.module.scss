@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .root {
 }
 
@@ -19,8 +21,10 @@
 }
 
 .user {
-  &:hover .line::after {
+  @include hover {
+    .line::after {
     width: 0;
+  }
   }
 }
 

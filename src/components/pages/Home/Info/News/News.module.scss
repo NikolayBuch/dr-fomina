@@ -1,3 +1,5 @@
+@import "styles/mixins";
+
 .root {
   display: flex;
   flex-direction: column;
@@ -37,7 +39,7 @@
   text-align: center;
   transition: background 400ms linear;
 
-  &:hover {
+  @include hover {
     background: #f0f0f0;
   }
 }
