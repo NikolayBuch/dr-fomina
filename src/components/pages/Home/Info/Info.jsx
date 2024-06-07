@@ -1,14 +1,18 @@
 import React from 'react';
 
-import s from './Info.module.scss';
 import VideoBlock from './VideoBlock';
 import News from './News';
+import Animation from 'components/Animation';
+
+import s from './Info.module.scss';
 
 const Info = () => {
   return (
     <div className={s.root}>
-      <VideoBlock />
-      <News/>
+      <Animation>
+        <VideoBlock />
+      </Animation>
+      <News />
     </div>
   );
 };

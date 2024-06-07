@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import Text from 'components/Text';
 import Button from 'components/Button';
 import Container from 'components/Container';
-
-import s from './VideoBlock.module.scss';
 import VideoStub from './VideoStub';
 import Video from './Video/';
+
+import s from './VideoBlock.module.scss';
 
 const VideoBlock = () => {
   const [isStubs, setStabs] = useState(true);
@@ -32,11 +32,9 @@ const VideoBlock = () => {
           , оснащенные новейшим оборудованием, где работают только
           высококвалифицированные специалисты.
         </Text>
-        <Button option='main' className={s.button}>
-          <a href='#'>
-            УЗНАТЬ БОЛЬШЕ
-          </a>
-        </Button>
+          <Button option='main' className={s.button}>
+            <a href='#'>УЗНАТЬ БОЛЬШЕ</a>
+          </Button>
       </div>
     </Container>
   );

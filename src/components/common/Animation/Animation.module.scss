@@ -1,0 +1,10 @@
+.root{
+  opacity: 0;
+  transform: translate(0px, 50%);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}

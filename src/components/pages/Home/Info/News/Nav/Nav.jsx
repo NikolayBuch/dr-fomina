@@ -20,7 +20,9 @@ const Nav = ({ currentFilter, onRenderFilter }) => {
             onClick={(e) => {
               valueFilter(item.title);
             }}
-            className={cx(s.nav, { [s.active]: item.title === currentFilter })}
+            className={cx(s.nav, {
+              [s.active]: item.title === currentFilter,
+            })}
             key={item.id}>
             {item.title}
           </li>
