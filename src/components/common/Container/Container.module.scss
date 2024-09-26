@@ -1,9 +1,14 @@
-@import "styles/media.scss";
+@import "styles/media";
 
 .root {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 9px;
   margin: 0 auto;
+
+  @include media(d) {
+    padding: 0 33px;
+  }
+  
 }
 
 .size {

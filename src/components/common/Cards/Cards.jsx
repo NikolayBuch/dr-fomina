@@ -11,7 +11,7 @@ const Cards = ({ item }) => {
       <div className={s.background}>
         <img src={`/images/${item.img}`} alt='' />
       </div>
-      <div className={s.content}>
+      <div>
         <Text as='h3' size='h3' className={s.title}>
           {item.title}
         </Text>

@@ -1,7 +1,13 @@
 @import "styles/mixins";
+@import 'styles/media';
 
 .root {
   margin-bottom: 65px;
+
+  @include media(d) {
+    margin-bottom: 25px;
+  }
+
 }
 .list {
   display: flex;

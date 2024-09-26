@@ -1,6 +1,8 @@
 @import "styles/mixins";
 
 .root {
+  padding: 14px 20px;
+
 }
 
 .container {
@@ -8,10 +10,18 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 14px 0 14px 0;
-
   border-bottom: 1px solid;
   border-color: var(--gray-color);
+}
+
+.inner{
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .sing {

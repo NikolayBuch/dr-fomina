@@ -1,0 +1,11 @@
+@import 'styles/media';
+
+.root {
+  width: 530px;
+  height: 370px;
+
+  @include media (d) {
+    width: 100%;
+    height: 481px;
+  }
+}

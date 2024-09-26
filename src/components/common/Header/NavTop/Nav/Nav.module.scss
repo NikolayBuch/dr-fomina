@@ -1,0 +1,29 @@
+@import "styles/media";
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 14px 20px ;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tel {
+  position: relative;
+  font-size: 20px;
+  line-height: 250%;
+  color: var(--black-light-color);
+}
+
+.tabletHidden {
+  display: block;
+
+  @include media(lg) {
+    display: none;
+  }
+}

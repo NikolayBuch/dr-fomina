@@ -1,16 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import Text from 'components/Text';
 
 import s from './Contacts.module.scss';
 
-const Contacts = ({ item,  }) => {
-
+const Contacts = ({ item }) => {
   return (
     <div className={s.root}>
       <Text as='a' size='large' href={item.link} className={s.link} isHtml>
-       {item.title} 
+        {item.title}
       </Text>
     </div>
   );
@@ -19,5 +18,5 @@ const Contacts = ({ item,  }) => {
 export default Contacts;
 
 Contacts.propTypes = {
-  item: PropTypes.object
-}
+  item: PropTypes.object,
+};

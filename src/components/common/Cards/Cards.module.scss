@@ -1,7 +1,6 @@
 @import "styles/mixins";
 @import "styles/media";
 
-
 .root {
   position: relative;
 
@@ -20,6 +19,12 @@
     img {
       transform: scale(1.1);
     }
+  }
+
+  @include media(d) {
+    width: 100%;
+    height: 270px;
+    padding: 30px 40px;
   }
 }
 
@@ -45,24 +50,29 @@
   }
 }
 
-.content {
-  height: 200px;
-}
-
 .title {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  width: 374px;
   height: 80px;
   margin-bottom: 20px;
 
   color: var(--black-color);
+
+  @include media (d) {
+    width: 334px;
+    height: auto;
+    margin-bottom: 15px;
+  }
 }
 
 .subtitle {
   width: 252px;
   color: var(--black-color);
+
+  @include media (d) {
+    width: 393px;
+  }
 }
 
 .button {

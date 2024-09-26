@@ -1,7 +1,8 @@
 @import "styles/mixins";
+@import 'styles/media';
 
 .button {
-  margin: 0 42px;
+  margin: 0 22px;
   color: var(--black-light-color);
   opacity: 0.5;
   transition:
@@ -12,5 +13,9 @@
   @include hover {
     opacity: 1;
     color: var(--blue-color);
+  }
+
+  @include media(d) {
+    margin: 0;
   }
 }

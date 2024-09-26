@@ -1,0 +1,51 @@
+@import "styles/media";
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  &.active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+  }
+  &.disable {
+    opacity: 0;
+    transition: opacity 300ms linear 300ms;
+  }
+}
+
+.sidebar {
+  position: relative;
+
+  height: 100%;
+  max-width: 50%;
+  background: var(--white-color);
+
+  transform: translateX(-100%);
+
+  &.active {
+    transform: translateX(0);
+    transition: transform 300ms linear 300ms;
+  }
+
+  &.disable {
+    transform: translateX(-100%);
+    transition: transform 300ms linear;
+  }
+}
+
+

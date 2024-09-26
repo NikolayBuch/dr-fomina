@@ -1,0 +1,27 @@
+@import 'styles/media';
+
+.root {
+  position: relative;
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: 26px;
+    height: 2px;
+    background-color: var(--black-color);
+    border-radius: 5px;
+    box-shadow: 0 -9px, 0 9px;
+  }
+
+@include media(lg) {
+  display: block;
+}
+}

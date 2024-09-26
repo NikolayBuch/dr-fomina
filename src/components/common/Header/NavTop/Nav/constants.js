@@ -2,18 +2,21 @@ export const left = [
   {
     id: 1,
     title: "О клинике",
-    icon: true,
+    arrow: true,
     link: "/about",
+    tabletHidden: true,
   },
   {
     id: 2,
     title: "Новости и акции",
     link: "/news",
+    tabletHidden: true,
   },
   {
     id: 3,
     title: "Контакты",
     link: '/contacts',
+    tabletHidden: true,
   },
 ]
 

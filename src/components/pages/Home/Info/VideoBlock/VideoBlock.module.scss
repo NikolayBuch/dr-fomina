@@ -1,7 +1,21 @@
+@import 'styles/media';
+
 .root {
-  display: flex;
-  padding: 0 27px;
+  padding: 0 22px;
+
+  @include media(d) {
+    padding: 0 10px;
+  }
 }
+
+.container{
+  display: flex;
+
+  @include media(d) {
+    flex-direction: column;
+  }
+}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -10,13 +24,26 @@
   width: 557px;
   height: 296px;
   margin-left: 59px;
+
+  @include media(d) {
+    width: auto;
+    margin: 40px 0 0 0;
+  }
 }
 
 .title{
   margin-bottom: 25px;
+
+  @include media(d) {
+    margin-bottom: 12px;
+  }
 }
 .text {
   margin-bottom: 31px;
+  
+  @include media(d) {
+    margin-bottom: 25px;
+  }
 }
 
 .link{

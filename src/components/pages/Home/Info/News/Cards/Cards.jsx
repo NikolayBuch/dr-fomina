@@ -32,7 +32,7 @@ const Cards = ({ item, size }) => {
           </Text>
         )}
         {item.subtitle ? (
-          <Text as='p' size='normal'>
+          <Text as='p' size='normal' className={s.hidden}>
             {item.subtitle}
           </Text>
         ) : (

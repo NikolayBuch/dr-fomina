@@ -2,9 +2,7 @@ import React from 'react';
 
 import Container from 'components/Container';
 import Text from 'components/Text';
-import { footer } from './constant';
-import { contacts } from './constant';
-import { social } from './constant';
+import { footer, contacts, social } from './constant';
 
 import s from './Footer.module.scss';
 
@@ -100,7 +98,7 @@ const Footer = () => {
 
   return (
     <footer className={s.root}>
-      <Container size='normal'>
+      <Container size='normal' className={s.container}>
         <div className={s.wrapper}>
           <Text as='ul' size='medium' className={s.left}>
             {footer.map((item) => (

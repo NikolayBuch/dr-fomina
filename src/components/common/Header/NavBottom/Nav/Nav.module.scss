@@ -1,0 +1,13 @@
+@import "styles/mixins";
+
+.root {
+  display: flex;
+}
+
+.tabletHidden {
+  display: block;
+
+  @include media(lg) {
+    display: none;
+  }
+}

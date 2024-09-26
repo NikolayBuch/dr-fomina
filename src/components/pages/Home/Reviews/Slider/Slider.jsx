@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -10,6 +10,8 @@ import s from './Slider.module.scss';
 
 const Slider = ({ children, list }) => {
   const [slideIndex, setSliderIndex] = useState(0);
+  const innerElement = useRef(793);
+  const widthInner = innerElement.current.offsetWidth;
 
   const length = list.length;
 
@@ -35,8 +37,9 @@ const Slider = ({ children, list }) => {
         <ButtonSlider side='left' onClick={handleMoveLeft} />
         <div className={s.wrapper}>
           <div
+            ref={innerElement}
             className={s.inner}
-            style={{ transform: `translateX(${-793 * slideIndex}px)` }}>
+            style={{ transform: `translateX(${-widthInner * slideIndex}px)` }}>
             {children}
           </div>
         </div>
@@ -59,5 +62,5 @@ export default Slider;
 
 Slider.propTypes = {
   children: PropTypes.any,
-  list: PropTypes.array
-}
+  list: PropTypes.array,
+};

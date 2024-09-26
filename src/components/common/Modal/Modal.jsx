@@ -17,21 +17,23 @@ const Modal = ({ isOpen }) => {
   const ModalComponent = getModalContent(modalData.type);
 
   useEffect(() => {
-    isOpen ? setShowModal(true) : setShowModal(false);
+    setShowModal(isOpen);
   }, [isOpen]);
 
   const closeModal = () => {
     setShowModal(false);
     setTimeout(() => {
       toggleModal();
-    }, 300);
+    }, 600);
   };
 
   return isOpen ? (
     <div className={cx(s.root, { [s.active]: showModal })}>
-      <div className={s.background} onClick={() => closeModal()}></div>
-      <div className={cx(s.content, { [s.active]: showModal })}>
-        <ModalButton onClick={() => closeModal()} />
+      <div
+        className={cx(s.background, showModal ? s.active : s.disable)}
+        onClick={closeModal}></div>
+      <div className={cx(s.content, showModal ? s.active : s.disable)}>
+        <ModalButton onClick={closeModal} />
         <ModalComponent closeModal={closeModal} item={modalData.content} />
       </div>
     </div>

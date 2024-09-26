@@ -1,9 +1,15 @@
-.root{
+@import "styles/media";
+
+.root {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 638px;
+  padding: 116px 18px 157px;
+
+  @include media(d) {
+    padding: 70px 18px 77px;
+  }
 }
 
 .container {
@@ -12,15 +18,21 @@
   align-items: center;
 }
 
-.title{
+.title {
   margin-bottom: 68px;
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 
   height: auto;
   margin: -50px -30px;
+
+  @include media(d) {
+    margin: -30px -11px;
+  }
 }

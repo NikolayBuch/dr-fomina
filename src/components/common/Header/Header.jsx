@@ -1,16 +1,15 @@
 import React from 'react';
 
-import NavTop from 'components/NavTop';
-import NavBottom from 'components/NavBottom';
+import NavTop from 'components/Header/NavTop';
+import NavBottom from 'components/Header/NavBottom';
 
 import s from './Header.module.scss';
-
 
 const Header = () => {
   return (
     <header>
       <nav className={s.root}>
-        <div className={s.root2}>
+        <div>
           <NavTop />
           <NavBottom />
         </div>

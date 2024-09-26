@@ -11,7 +11,7 @@ const Container = ({ className, size, children }) => {
     size,
   });
 
-  return <div className={cx(s.root, className, mods)}>{children}</div>;
+  return <div className={cx(s.root, mods, className)}>{children}</div>;
 };
 
 Container.propTypes = {

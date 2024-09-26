@@ -1,11 +1,9 @@
 @import "styles/mixins";
 
 .root {
-  position: relative;
   display: flex;
   align-items: center;
 
-  font-size: 14px;
   color: var(--black-light-color);
   transition: color 300ms linear;
 
@@ -24,21 +22,38 @@
 
 .option {
   &-left {
+    position: relative;
+    font-size: 14px;
     margin-right: 30px;
 
     &:last-child {
       margin-right: 0;
     }
+    .static {
+      transform: rotate(0);
+      transition: transform 300ms linear;
+    }
+
+    .active {
+      color: var(--blue-color);
+      .dropdown {
+        transform: rotate(180deg);
+        transition: transform 300ms linear;
+      }
+    }
   }
 
   &-center {
     position: relative;
-    margin: 0 30px 0 30px;
     padding-bottom: 7px;
 
     font-size: 12px;
     line-height: 83%;
     letter-spacing: 0.06em;
+
+    &:first-child {
+      margin-right: 60px;
+    }
 
     &::after {
       content: "";
@@ -65,7 +80,6 @@
       color 300ms linear;
 
     & a {
-      position: relative;
       width: 100%;
       padding-bottom: 15px;
 
@@ -100,17 +114,55 @@
       }
     }
   }
-}
 
-.static {
-  transform: rotate(0);
-  transition: transform 300ms linear;
-}
+  &-bottom {
+    margin-right: 35px;
 
-.active {
-  color: var(--blue-color);
-  .dropdown {
-    transform: rotate(180deg);
-    transition: transform 300ms linear;
+    .icon {
+      margin-right: 15px;
+    }
+
+    .link {
+      transition: color 300ms linear;
+
+      @include hover {
+        color: var(--pink-hover-color);
+      }
+    }
+  }
+
+  &-sidebar {
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--gray-color);
+
+    .button {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .icon {
+      margin-right: 15px;
+    }
+
+    .static {
+      width: 13px;
+      height: 8px;
+      transform: rotate(270deg);
+      transition: transform 300ms linear;
+    }
+  }
+
+  &-sidedrop {
+
+    padding: 15px 0 15px 20px;
+
+    .link {
+      transition: color 300ms linear;
+
+      @include hover {
+        color: var(--blue-color);
+      }
+    }
   }
 }

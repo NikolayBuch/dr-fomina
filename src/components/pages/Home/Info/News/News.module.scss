@@ -1,4 +1,5 @@
 @import "styles/mixins";
+@import 'styles/media';
 
 .root {
   display: flex;
@@ -24,6 +25,11 @@
 
   margin-left: 17px;
   margin-bottom: 70px;
+
+  @include media(d) {
+  grid-template-columns: 1fr;
+
+  }
 }
 
 .button {

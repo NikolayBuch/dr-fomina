@@ -9,8 +9,8 @@ import s from './YourCity.module.scss'
 const YourCity = ({handleYourCity, handleAnswer}) => {
   return (
       <div className={s.agreement}>
-        <Button option='main' className={s.yes} onClick={()=>handleAnswer()}> ДА</Button>
-        <Button className={s.no} onClick={()=> handleYourCity()} > Нет, другой город</Button>
+        <Button option='main' className={s.yes} onClick={handleAnswer}> ДА</Button>
+        <Button className={s.no} onClick={handleYourCity} > Нет, другой город</Button>
       </div>
   );
 };

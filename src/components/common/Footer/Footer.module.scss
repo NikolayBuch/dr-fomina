@@ -5,22 +5,31 @@
   padding-top: 107px;
   color: var(--black-color);
 }
+
+.container {
+  padding: 0 27px;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
+
 .left {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 38px;
   grid-row-gap: 15px;
+
   li {
     height: 33px;
+
     a {
       padding-bottom: 2px;
       height: 100%;
       @include hoverButton;
     }
+
     &:last-child {
       grid-column: 2;
     }
@@ -30,9 +39,11 @@
 .contactsWrapper {
   margin-bottom: 23px;
 }
+
 .contactsItem {
   margin-bottom: 27px;
 }
+
 .contactsLink {
   color: var(--black-light-color);
   transition: color 300ms linear;
@@ -47,7 +58,9 @@
 .socialItem {
   opacity: 0.13;
   padding: 5px;
-  transition: color 300ms linear, opacity 300ms linear,;
+  transition:
+    color 300ms linear,
+    opacity 300ms linear;
 
   @include hover {
     color: var(--blue-color);

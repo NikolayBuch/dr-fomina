@@ -1,0 +1,74 @@
+@import "styles/media";
+.wrapper {
+  height: 100%;
+  position: relative;
+  padding-right: 8px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.social {
+  display: flex;
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.link {
+  margin-right: 19px;
+  color: #bdbdbd;
+}
+
+.contactsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.contactsLink {
+  color: var(--black-light-color);
+  transition: color 300ms linear;
+  @include hover {
+    color: var(--blue-color);
+  }
+}
+
+.header {
+  width: 100%;
+  height: 63px;
+  margin-bottom: 46px;
+
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.closeButton {
+  top: 22px;
+  right: 20px;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 400ms ease;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 400ms ease;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  font-family: var(--font-family-second);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 162%;
+  color: var(--black-light-color);
+
+  svg {
+    margin-right: 11px;
+  }
+}

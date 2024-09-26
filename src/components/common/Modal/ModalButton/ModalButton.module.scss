@@ -10,6 +10,8 @@
   color: var(--black-light-color);
   transition: color 300ms linear;
 
+  cursor: pointer;
+
   @include hover {
     color: var(--blue-color);
   }
